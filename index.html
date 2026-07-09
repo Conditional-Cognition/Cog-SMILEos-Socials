@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmileOS 2.0</title>
+    <link rel="icon" type="image/png" href="assets/SmileOS_2_icon_smile.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Red background aura glow zone -->
+<div class="glow-container">
+
+    <!-- Main SmileOS Interface Box -->
+    <div class="smile-os-window">
+
+        <!-- Main Top Title Bar -->
+        <header class="main-titlebar">
+            <div class="title-left">
+                <span class="smiley-icon"><img src="assets/SmileOS_2_icon_smile.png" style="width: 16px; height: 16px;" alt="smiley icon"></span>
+                <span class="title-text">SmileOS 2.0</span>
+            </div>
+            <div class="window-controls">
+                <div class="control-btn minus">
+                    <img src="assets/Custom_minimize.png" alt="Minimize">
+                </div>
+                <div class="control-btn plus">
+                    <img src="assets/Custom_maximize.png" alt="Maximize">
+                </div>
+                <div class="control-btn cross" id="main-close-btn">
+                    <img src="assets/Custom_close.png" alt="Close">
+                </div>
+            </div>
+        </header>
+
+        <!-- Inner Workplace Split -->
+        <div class="interface-body">
+
+            <!-- Left Nav Column -->
+            <aside class="left-pane">
+                <div class="brand-area">
+                    <div class="logo-text-wrap">
+                        <span class="logo-white">Smile</span><span class="logo-sub">OS 2.0</span>
+                        <div class="rainbow-swoosh"></div>
+                    </div>
+                    <img class="logo-image" src="assets/SmileOS2.0.webp" alt="SmileOS 2.0 logo">
+                </div>
+
+                <nav class="button-list">
+                    <button class="os-button disabled-btn" data-target="weapons" disabled>Weapons</button>
+                    <button class="os-button" data-target="enemies">Enemies</button>
+                    <button class="os-button disabled-btn" data-target="cybergrind" disabled>The Cyber Grind</button>
+                    <button class="os-button disabled-btn" data-target="sandbox" disabled>The Sandbox</button>
+                </nav>
+            </aside>
+
+            <main class="right-pane">
+
+                <div class="sub-titlebar">
+                    <div class="title-left">
+                        <span class="check-icon" id="sub-icon"><img src="assets/SmileOS_2_icon_enemy.svg" style="width: 16px; height: 16px;" alt="socials icon"></span>
+                        <span id="sub-title-text">Socials</span>
+                    </div>
+                </div>
+
+                <div class="inner-screen" id="screen-content">
+                    <!-- JavaScript forces social screen immediately on load -->
+                </div>
+
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

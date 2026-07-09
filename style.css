@@ -1,0 +1,765 @@
+.brand-area,.control-btn {
+    position: relative;
+    cursor: pointer
+}
+
+.brand-area,.inner-screen,.os-button,.weapons-header {
+    text-align: center
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0c0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    user-select: none
+}
+
+.left-pane,.smile-os-window {
+    display: flex;
+    flex-direction: column
+}
+
+.glow-container {
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 80px 20px rgba(139,0,0,.45)
+}
+
+.smile-os-window {
+    width: 600px;
+    height: 480px;
+    background-color: #2b2b2b;
+    border: 4px solid #1a1a1a;
+    box-shadow: inset 1px 1px 2px #555,inset -1px -1px 2px #000;
+    overflow: hidden
+}
+
+.main-titlebar,.sub-titlebar {
+    background: linear-gradient(to bottom,#9e1b1b 0,#731010 40%,#540808 100%);
+    border-bottom: 3px solid #141414;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0e0e0;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.title-left {
+    display: flex;
+    align-items: center;
+    gap: 6px
+}
+
+.smiley-icon {
+    color: #9e1b1b;
+    background: #141414;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px
+}
+
+.weapon-cycle-controls,.window-controls {
+    display: flex;
+    gap: 4px
+}
+
+.control-btn {
+    width: 14px;
+    height: 14px;
+    background-color: #1c1a1a;
+    border: 1px solid #444;
+    border-radius: 3px;
+    box-shadow: inset 1px 1px 2px #000
+}
+
+.interface-body {
+    display: flex;
+    flex: 1;
+    background-color: #212121;
+    padding: 10px;
+    gap: 10px
+}
+
+.left-pane {
+    width: 160px;
+    background-color: #1c1c1c;
+    border: 2px solid #121212;
+    border-radius: 4px;
+    box-shadow: inset -1px -1px 2px #333;
+    padding: 15px 10px;
+    align-items: center
+}
+
+.brand-area.showing-image .logo-text-wrap,.logo-image {
+    display: none
+}
+
+.brand-area {
+    margin-bottom: 25px;
+    width: 100%
+}
+
+.logo-image {
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+    image-rendering: crisp-edges
+}
+
+.os-button,.weapon-thumb {
+    image-rendering: pixelated
+}
+
+.brand-area.showing-image .logo-image {
+    display: block
+}
+
+.logo-white {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+.logo-sub {
+    color: #d12828;
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: 2px
+}
+
+.rainbow-swoosh {
+    height: 4px;
+    width: 80%;
+    margin: 4px auto 0;
+    background: linear-gradient(to right,#f33,#f93,#3c3,#39f,#93f);
+    border-radius: 2px
+}
+
+.button-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.os-button {
+    width: 100%;
+    height: 44px;
+    color: #aaa;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    background-image: url('assets/Custom_button.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    image-rendering: crisp-edges;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    filter: pixelate();
+    transition: filter .1s
+}
+
+.os-button:hover {
+    filter: brightness(1.2);
+    color: #fff
+}
+
+.os-button:active,.weapon-category-btn.active-tab {
+    color: #fff;
+    background-image: url('assets/Custom_button_pressed.svg')
+}
+
+.right-pane {
+    flex: 1;
+    background-color: #1a1a1a;
+    border: 2px solid #111;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.sub-titlebar {
+    font-size: 12px;
+    padding: 4px 8px
+}
+
+.inner-screen {
+    flex: 1;
+    background-color: #0a0a0a;
+    margin: 8px;
+    border: 2px solid #141414;
+    box-shadow: inset 0 0 15px #000;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.enemy-grid-btn,.enemy-grid-locked,.weapon-row {
+    background-color: #141414
+}
+
+.screen-text {
+    color: #9c9c9c;
+    font-size: 14px;
+    margin: 0 0 0;
+}
+
+.cheat-code {
+    color: #da2222;
+    font-family: monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 10px 0 25px;
+    font-weight: 700
+}
+
+.sub-text {
+    font-size: 13px
+}
+
+.enemy-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 6px;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 20px
+}
+
+.enemy-grid-btn {
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #333;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0;
+    transition: border-color .1s,filter .1s
+}
+
+.enemy-grid-btn:hover {
+    filter: brightness(1.15)
+}
+
+.enemy-grid-btn.active-tab {
+    border-color: #da2222
+}
+
+.enemy-grid-locked {
+    aspect-ratio: 1/1;
+    border: 2px dashed #333;
+    border-radius: 3px;
+    color: #555;
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.inner-screen.top-anchored {
+    justify-content: flex-start
+}
+
+.weapons-header {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px
+}
+
+.inner-screen.weapons-mode {
+    align-items: stretch;
+    justify-content: flex-start
+}
+
+.weapon-variant-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto
+}
+
+.weapon-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #262626;
+    border-radius: 4px;
+    padding: 8px 10px
+}
+
+.weapon-order-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex-shrink: 0
+}
+
+.weapon-order-btn {
+    width: 16px;
+    height: 13px;
+    font-size: 7px;
+    line-height: 1;
+    background-color: #1c1a1a;
+    border: 1px solid #333;
+    color: #888;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 2px
+}
+
+.enemy-back-btn:hover,.image-back-btn:hover,.weapon-cycle-btn:hover,.weapon-footer-btn:hover,.weapon-order-btn:hover {
+    color: #fff;
+    border-color: #da2222
+}
+
+.weapon-slot-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: #666;
+    width: 18px;
+    text-align: center;
+    flex-shrink: 0
+}
+
+.weapon-thumb {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    background-color: #0a0a0a;
+    border: 1px solid #262626;
+    border-radius: 3px;
+    image-rendering: crisp-edges;
+    flex-shrink: 0
+}
+
+.weapon-info-text {
+    flex: 1;
+    min-width: 0;
+    text-align: left
+}
+
+.weapon-name {
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    /*noinspection CssNonIntegerLengthInPixels*/
+    letter-spacing: 0.5px
+}
+
+.enemy-back-btn,.image-back-btn,.weapon-footer-btn,.weapon-status-btn {
+    background-color: #1c1a1a;
+    font-weight: 500
+}
+
+.weapon-substatus {
+    margin: 2px 0 0;
+    color: #888;
+    font-size: 10px
+}
+
+.weapon-row-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    flex-shrink: 0
+}
+
+.weapon-status-btn {
+    display: inline-block;
+    border: 1px solid #444;
+    color: #ddd;
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 3px
+}
+
+.weapon-status-btn.weapon-status-alternate {
+    color: #da2222;
+    font-weight: 700
+}
+
+.weapon-status-btn.weapon-status-unequipped {
+    color: #888
+}
+
+.weapon-cycle-btn {
+    background-color: #1c1a1a;
+    border: 1px solid #333;
+    color: #888;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+.weapon-footer {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 12px
+}
+
+.weapon-footer-btn {
+    flex: 1;
+    border: 1px solid #444;
+    color: #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer
+}
+
+.enemy-detail-page {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    text-align: left
+}
+
+.enemy-detail-image {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border: 2px solid #333;
+    border-radius: 4px;
+    image-rendering: pixelated;
+    flex-shrink: 0
+}
+
+.enemy-detail-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 0
+}
+
+.enemy-detail-panel .enemy-name {
+    margin: 0;
+    font-size: 15px
+}
+
+.enemy-detail-panel .screen-text {
+    text-align: left;
+    margin: 0;
+    overflow-wrap: break-word
+}
+
+.enemy-back-btn {
+    align-self: flex-start;
+    margin-top: 20px;
+    color: #aaa;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 6px 18px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color .1s,border-color .1s
+}
+.image-back-btn {
+    align-self: flex-start;
+    margin-top: 20px;
+    color: #aaa;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 6px 18px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color .1s,border-color .1s
+}
+
+.enemy-link {
+    color: #da2222;
+    font-family: monospace;
+    font-size: 13px;
+    text-decoration: none;
+    word-break: break-all
+}
+
+.enemy-link:hover {
+    text-decoration: underline
+}
+
+.left-pane.weapons-mode {
+    padding: 0;
+    align-items: stretch
+}
+
+.left-pane-content {
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1
+}
+
+.left-pane.weapons-mode .os-button {
+    height: 30px;
+    font-size: 12px;
+    margin-bottom: 0
+}
+
+.weapon-nav-spacer {
+    height: 38px;
+    width: 100%
+}
+
+#screen-content,.enemy-detail-panel {
+    height: 100%;
+    overflow-y: auto
+}
+
+.weapon-back-btn {
+    width: 100%
+}
+
+#screen-content::-webkit-scrollbar {
+    width: 8px
+}
+
+#screen-content::-webkit-scrollbar-track {
+    background: #1a1a1a
+}
+
+#screen-content::-webkit-scrollbar-thumb {
+    background: #444;
+    border: 1px solid #000
+}
+
+#screen-content::-webkit-scrollbar-thumb:hover {
+    background: #666
+}
+
+.enemy-detail-panel {
+    color: #ccc;
+    font-family: 'Courier New',Courier,monospace
+}
+
+.detail-header {
+    color: #f33;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: block
+}
+
+.screen-text {
+    line-height: 1;
+    white-space: pre-line;
+}
+
+.enemy-detail-panel {
+    padding: 0;
+    display: flex;
+    flex-direction: column
+}
+
+.enemy-detail-panel p {
+    margin: 0;
+    padding: 0 0;
+}
+
+.highlight-red {
+    color: #f33;
+    font-weight: 700;
+    margin-top: 15px!important;
+    margin-bottom: 5px!important
+}
+
+.highlight-white {
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 15px!important;
+    margin-bottom: 5px!important
+}
+
+.enemy-detail-panel::-webkit-scrollbar {
+    width: 8px
+}
+
+.enemy-detail-panel::-webkit-scrollbar-thumb {
+    background: #444
+}
+
+.screen-text {
+    white-space: pre-line;
+    /* This renders \n as a new line */
+    word-wrap: break-word;
+    /* Ensures long lines wrap properly */
+    margin-bottom: 10px;
+}
+
+.inner-screen {
+    overflow: hidden;
+    /* Keep the CRT border look */
+    display: flex;
+    flex-direction: column;
+}
+
+.enemy-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 113%;
+    overflow: hidden;
+    /* Prevents double scrollbars */
+}
+
+/* Make the page the main scrollable area */
+.enemy-detail-page {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+    /* This enables the scrollbar */
+    padding: 10px;
+    gap: 15px;
+    align-items: flex-start;
+    /* Keeps content at the top */
+}
+
+/* Ensure the panel takes up all available space but lets the page handle scrolling */
+.enemy-detail-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: min-content;
+    /* This is the key: forces the panel to be as tall as its content */
+}
+
+/* Back button sits underneath the scrolling content */
+.enemy-back-btn {
+    margin-top: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* Custom scrollbar styling specifically for the detail panel */
+.enemy-detail-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.enemy-detail-panel::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+.enemy-detail-panel::-webkit-scrollbar-thumb {
+    background: #444;
+    border: 1px solid #000;
+}
+
+.enemy-detail-panel::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* Container holds everything */
+.enemy-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Page holds image + text, enables internal scroll */
+.enemy-detail-page {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    gap: 15px;
+}
+
+.enemy-detail-panel {
+    flex: 1;
+    overflow-y: visible;
+}
+
+.enemy-display {
+    width: 134px;
+    align-items: flex-start;
+}
+
+.enemy-back-btn {
+    flex-shrink: 0;
+    margin-top: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.screen-text {
+    white-space: pre-line;
+    line-height: 1.4;
+}
+.enemy-text {
+    width: 199px;
+    height: 340px;
+    overflow-y: auto;
+}
+
+#external-socials-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #8b1111;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    z-index: 9999;
+    transition: color 0.15s ease;
+}
+
+#external-socials-btn:hover {
+    color: #da2222;
+}
+
+.control-btn {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: inline-block;
+    background: none;
+    border: none;
+    filter: brightness(0.7);
+}
+
+.control-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.control-btn:hover {
+    filter: brightness(1);
+}
